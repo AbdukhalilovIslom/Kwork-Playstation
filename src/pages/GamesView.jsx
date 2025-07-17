@@ -1,3 +1,3 @@
 export default function GamesView() {
-  return <div>GamesView</div>;
+  return <div className="text-red-500">GamesView</div>;
 }
