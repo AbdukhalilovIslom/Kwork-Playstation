@@ -34,6 +34,7 @@ export default function Hero() {
     <div>
       <div className="max-sm:hidden grid grid-cols-4 gap-5 px-25 py-12.5 max-sm:px-4 max-sm:py-5">
         <div
+          style={{ backgroundImage: `url(${img})` }}
           className={`bg-[url('${img}')] relative flex flex-col justify-end items-start px-8 py-14 col-span-3 bg-center bg-cover rounded-3xl`}
         >
           <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(1,2,6,0.5),_rgba(0,0,0,0))] transition-all duration-300 rounded-3xl"></div>
@@ -54,6 +55,7 @@ export default function Hero() {
               onClick={() => {
                 setActiveHero(index);
               }}
+              style={{ backgroundImage: `url(${item.img})` }}
               className={`bg-[url('${item.img}')] relative flex items-end px-5 py-4 h-40 bg-center bg-cover rounded-3xl cursor-pointer`}
             >
               <div
@@ -85,6 +87,7 @@ export default function Hero() {
               onClick={() => {
                 setActiveHero(index);
               }}
+              style={{ backgroundImage: `url(${item.img})` }}
               className={`bg-[url('${item.img}')] relative !flex !items-end px-5 py-4 !h-50 bg-center bg-cover rounded-3xl cursor-pointer max-sm:px-3 max-sm:py-4`}
             >
               <div className="absolute inset-0 bg-[linear-gradient(to_right,_rgba(1,2,6,0.5),_rgba(0,0,0,0))] transition-all duration-300 rounded-3xl"></div>
