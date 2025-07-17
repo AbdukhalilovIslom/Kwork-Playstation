@@ -5,7 +5,7 @@ const Basket = () => {
   const items = [1, 2]; // 2ta mahsulot
 
   return (
-    <div className="p-4 flex flex-row gap-6 px-20 max-[900px]:flex-col max-[900px]:px-4">
+    <div className="p-4 flex flex-row gap-6 px-20 max-[900px]:flex-col max-[900px]:px-4 min-h-screen">
       {/* Chap qism */}
       <div className="flex-grow">
         <div className="flex items-center justify-between w-full">
