@@ -244,7 +244,7 @@ export default function PlayStationPlusDesign() {
           <h3 className="text-3xl max-sm:text-[15px] font-bold text-primary mb-3">
             Часто задаваемые вопросы
           </h3>
-          <div className="flex flex-wrap gap-x-10 rounded-xl gap-y-2 max-sm:gap-3 sm:h-18 max-sm:border max-sm:border-primary max-sm:px-2 max-sm:py-1">
+          <div className="flex flex-wrap gap-x-10 rounded-xl gap-y-2 max-sm:gap-3 max-sm:border max-sm:border-primary max-sm:px-2 max-sm:py-1">
             {questions.map((item, index) => {
               const isOpen = openIndex === index;
               return (

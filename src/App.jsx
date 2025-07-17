@@ -5,21 +5,21 @@ import Replenishment from "./pages/Replenishment";
 import SubscriptionPage from "./pages/SubscriptionPage";
 import "./App.css";
 
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <Router>
       <div>
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<>home</>} />
           <Route path="/games" element={<Games />} />
           <Route path="/replenish" element={<Replenishment />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </Router>
   );
