@@ -11,105 +11,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 export default function Products() {
-  // const products = [
-  //   {
-  //     id: "1",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "2",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "3",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: false,
-  //     rate: 5,
-  //     ps4: false,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "4",
-  //     img: "",
-  //     title: "Marvel",
-  //     sale: "",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: false,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "5",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "6",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "7",
-  //     img: "",
-  //     title: "FC 25",
-  //     sale: "33%",
-  //     rus: false,
-  //     rate: 5,
-  //     ps4: false,
-  //     ps5: true,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  //   {
-  //     id: "8",
-  //     img: "",
-  //     title: "Marvel",
-  //     sale: "",
-  //     rus: true,
-  //     rate: 5,
-  //     ps4: true,
-  //     ps5: false,
-  //     price: 1000,
-  //     originPrice: 1500,
-  //   },
-  // ];
-
   return (
     <div className="flex flex-col gap-12 max-sm:px-4">
       <div className="relative mt-8 overflow-hidden">
@@ -149,11 +50,13 @@ export default function Products() {
           }}
           className="solutions-swiper"
         >
-          {products.map((item, index) => (
-            <SwiperSlide key={index} className="!w-auto">
-              <Card {...item} />
-            </SwiperSlide>
-          ))}
+          {products
+            .filter((product) => product.sale !== "")
+            .map((item, index) => (
+              <SwiperSlide key={index} className="!w-auto">
+                <Card {...item} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
       <div className="relative mt-8 overflow-hidden">
@@ -193,11 +96,13 @@ export default function Products() {
           }}
           className="solutions-swiper"
         >
-          {products.map((item, index) => (
-            <SwiperSlide key={index} className="!w-auto">
-              <Card {...item} />
-            </SwiperSlide>
-          ))}
+          {products
+            .sort((a, b) => b.rate - a.rate)
+            .map((item, index) => (
+              <SwiperSlide key={index} className="!w-auto">
+                <Card {...item} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
       <div className="relative mt-8 overflow-hidden">
